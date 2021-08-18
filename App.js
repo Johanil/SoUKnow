@@ -1,21 +1,40 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import React, {Component} from "react";
+import {
+  StyleSheet,
+  TouchableHighlight,
+  Image,
+  Text,
+  SafeAreaView,
+  Button,
+  Alert,
+} from "react-native";
 
 export default function App() {
+  const handlePress = () => console.log("Text clicked!");
+  console.log(require("./assets/icon.png"));
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Button
+        title="CLick ME!"
+        onPress={() =>
+          Alert.alert("Titleee", "Message", [
+            {
+              text: "Yes",
+              onPress: () => console.log("YES"),
+            },
+            { text: "No" },
+          ])
+        }
+      />
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
