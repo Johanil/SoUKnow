@@ -9,11 +9,11 @@ import {
   Button,
   Alert,
 } from "react-native";
-import { displayStores, fetchStores } from "./src/api/systembolaget";
+import { getStores, getStore } from "./src/api/systembolaget";
 
 export default function App() {
-  console.log("Fetch:");
-  displayStores;
+  getStore("0102");
+  getStores;
   return (
     <SafeAreaView style={styles.container}>
       <Text>HEJ</Text>
