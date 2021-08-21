@@ -1,4 +1,5 @@
 import { StatusBar } from "expo-status-bar";
+import Store from "./src/components/Store/Store";
 import React, { Component } from "react";
 import {
   StyleSheet,
@@ -16,7 +17,7 @@ export default function App() {
   getStores;
   return (
     <SafeAreaView style={styles.container}>
-      <Text>HEJ</Text>
+      <Store></Store>
     </SafeAreaView>
   );
 }
