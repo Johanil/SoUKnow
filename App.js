@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import React, {Component} from "react";
+import React, { Component } from "react";
 import {
   StyleSheet,
   TouchableHighlight,
@@ -9,24 +9,14 @@ import {
   Button,
   Alert,
 } from "react-native";
+import { displayStores, fetchStores } from "./src/api/systembolaget";
 
 export default function App() {
-  const handlePress = () => console.log("Text clicked!");
-  console.log(require("./assets/icon.png"));
+  console.log("Fetch:");
+  displayStores;
   return (
     <SafeAreaView style={styles.container}>
-      <Button
-        title="CLick ME!"
-        onPress={() =>
-          Alert.alert("Titleee", "Message", [
-            {
-              text: "Yes",
-              onPress: () => console.log("YES"),
-            },
-            { text: "No" },
-          ])
-        }
-      />
+      <Text>HEJ</Text>
     </SafeAreaView>
   );
 }
